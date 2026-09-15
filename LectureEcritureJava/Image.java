@@ -46,4 +46,29 @@ public class Image {
             }
         }
     }
+	
+	public void write_bin(String filename) throws IOException {
+		
+		private final static int NB_PIXEL = this.getHeight * this.getWidth *
+		
+		byte[] tabByte = new byte[];
+		
+		try (FileWriter writer = new FileWriter(filename)) {
+			
+			writer.write("P3\n");
+            writer.write(width + " " + height + "\n");
+            writer.write("255\n");
+			
+			for (int y = 0; y < height; y++) {
+                for (int x = 0; x < width; x++) {
+                    writer.write(
+                        pixels[y][x][0] + 
+                        pixels[y][x][1] + 
+                        pixels[y][x][2] 
+                    );
+                }
+                writer.write("\n");
+            }
+		}
+	}
 }
