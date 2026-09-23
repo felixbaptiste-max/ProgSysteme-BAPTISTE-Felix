@@ -1,8 +1,9 @@
 public class Utils {
 
     public static int writeInt(byte[] memory, int offset, int value) {
-        // TODO: Écrire les 4 octets de 'value' dans 'memory'
-        // à partir de 'offset', en big-endian.
+        memory[0] = (byte) value v & oxFF
+		memory[1] = (byte) value *
+		
         return 4;
     }
 
